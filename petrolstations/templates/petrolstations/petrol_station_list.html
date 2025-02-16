@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+     <title>Petrol Stations</title>
+ </head>
+ <body>
+     <h1>Petrol Stations</h1>
+     <ul>
+         {% for station in stations %}
+             <li>
+                 <strong>{{ station.name }}</strong> - {{ station.address }}
+                 <br>
+                 Diesel: {{ station.diesel_price }}
+                 E5: {{ station.e5_price }}
+                 E10: {{ station.e10_price }}
+                 <br>
+                 Electric Fueling: {% if station.electric_fueling %} Yes {% else %} No {% endif %}
+				 Update: {{station.last_update }}
+             </li>
+         {% endfor %}
+     </ul>
+ </body>
+ </html>
